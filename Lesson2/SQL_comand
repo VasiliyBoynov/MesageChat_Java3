@@ -1,0 +1,11 @@
+create table 'users'(
+                        'ID' integer primary key autoincrement not null ,
+                        'NickID'  text unique not null,
+                        'Password' text not null,
+                        'Connection' boolean not null);
+
+    insert into 'users'('NickID','Password') values ('admin','admin');
+
+    update 'users' set Password = notAdmin where NickID = 'admin';
+
+    delete from 'users' where NickID = 'admin';
